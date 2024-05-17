@@ -96,7 +96,45 @@ const TodoList = ({ amountTask, doneTaskAmount, showAlert }) => {
     setTaskAmount((prevTaskAmount) => prevTaskAmount - 1);
   };
 
-  
+  useEffect(() =>  {
+    // Calculate remaining time for each todo item
+    calculateRemainingTime();
+    
+    // Set interval to recalculate remaining time periodically
+    const intervalId = setInterval(calculateRemainingTime, 1000);
+
+    // Cleanup function to clear interval
+    return () =>  clearInterval(intervalId);
+  }, [todos]); // Re-run effect when todos change
+
+  function calculateRemainingTime() {
+    const currentTime = new Date();
+    const updatedTodos = todos.map((todo) => {
+      const [todoHours, todoMinutes] = todo.time.split(":").map(Number);
+      const taskTime = new Date();
+      taskTime.setHours(todoHours);
+      taskTime.setMinutes(todoMinutes);
+      taskTime.setSeconds(0);
+
+      const remainingTime = taskTime.getTime() - currentTime.getTime();
+      const remainingHours = Math.floor(remainingTime / (1000 * 60 * 60));
+      const remainingMinutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+      const remainingSeconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+      const remainingTimeText = remainingTime <= 0 ?
+        "Task has expired" :
+        `Task expires in ${remainingHours} hours, ${remainingMinutes} minutes, ${remainingSeconds} seconds`;
+
+      return {
+        ...todo,
+        remainingTime: remainingTimeText,
+        expired: remainingTime >= 0,
+      };
+    });
+
+    // Update todos state with the updated todo items
+    setTodos(updatedTodos);
+  }
 
   return (
     <div className="main-container">
@@ -131,7 +169,6 @@ const TodoList = ({ amountTask, doneTaskAmount, showAlert }) => {
                 className="todoItem-container"
                 key={index}
                 todo={todo}
-                time={todo.time}
                 onDelete={() => handleDelete(index)}
                 onComplete={() => handleComplete(index)}
               />
