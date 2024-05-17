@@ -5,8 +5,13 @@ html, body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+ 
   background-color: black; /* Ensures the entire page has a black background */
   color: white; /* Ensures text color is white for readability */
+}
+
+h1, h2 {
+  font-family: "Pacifico", cursive;
 }
 
 .App {
@@ -58,6 +63,14 @@ button {
   width: 230px;
 }
 
+.buttons {
+  color: rgb(255, 243, 243);
+  width: 90px;
+  margin-top:5px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 .todo-list {
   background-color: rgb(249, 142, 233);
   width: 60%;
@@ -82,6 +95,7 @@ button {
 
 .todoProgress {
   width: 100%;
+  font-family: 'Indie Flower', cursive;
 }
 
 .todolist-container {
@@ -91,14 +105,17 @@ button {
   padding-bottom: 20px;
   justify-content: space-around;
   background-color: pink;
+  border-radius: 50px;
 }
 
 ul {
   list-style-type: none;
+  font-family: 'Indie Flower', cursive;
 }
 
 .buttons {
   margin-left: 20px;
+  
 }
 
 @media (prefers-reduced-motion: no-preference) {
