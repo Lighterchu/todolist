@@ -1,22 +1,18 @@
-* {
-  color: white; 
-}
-
-body {
-  background-color: black;
-}
-
+/* Set the background color of the entire page to black */
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  background-color: black; /* Ensures the entire page has a black background */
+  color: white; /* Ensures text color is white for readability */
 }
 
 .App {
   text-align: center;
   background-color: black;
+  color: white;
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -26,10 +22,8 @@ html, body {
   box-sizing: border-box;
 }
 
-
 .main-container {
   padding-bottom: 10px;
-  
 }
 
 .alert-container {
@@ -37,10 +31,10 @@ html, body {
   justify-content: center;
   padding-top: 20px;
 }
+
 .alert {
   width: 100%;
 }
-
 
 .todo-list-container {
   display: grid;
@@ -48,13 +42,10 @@ html, body {
   max-height: 350px;
   place-items: center; /* Centers both horizontally and vertically */
   overflow: auto;
-  /* background-color: blue; */
-  
 }
 
 input { 
   color: rgb(225, 221, 221);
-  
 }
 
 .input-container {
@@ -72,7 +63,6 @@ button {
   width: 60%;
   padding-right: 40px;
   border-radius: 5%;
-
 }
 
 .carousel-image {
@@ -82,29 +72,23 @@ button {
   object-fit: cover;
 }
 
-
 .todoProgress-container {
   display: grid;
   margin-top: 10px;
   padding-bottom: 20px;
   max-height: 350px;
   place-items: center; /* Centers both horizontally and vertically */
-  
-  
 }
 
 .todoProgress {
-  /* background-color:red;  */
   width: 100%;
 }
-
 
 .todolist-container {
   display: flex;
   padding-top: 10px;
   margin-top: 20px;
   padding-bottom: 20px;
-  /* margin: 0 auto; */
   justify-content: space-around;
   background-color: pink;
 }
@@ -114,8 +98,7 @@ ul {
 }
 
 .buttons {
- margin-left: 20px;
-
+  margin-left: 20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -124,7 +107,7 @@ ul {
   }
 }
 
-/* media sizing */
+/* Media sizing */
 @media (max-width: 600px) {
   button {
     color: rgb(255, 243, 243);
@@ -136,7 +119,6 @@ ul {
     width: 70%;
     padding-right: 40px;
     border-radius: 5%;
-  
   }
 
   .todoProgress {
@@ -146,8 +128,4 @@ ul {
   .carousel-image {
     max-height: 300px; /* Adjust the max-height for mobile devices */
   }
-
-
- 
-  
 }
