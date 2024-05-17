@@ -7,18 +7,18 @@ body {
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
+  /* margin: 0;
+  padding: 0; */
+  /* width: 100%;
+  height: 100%; */
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .App {
   text-align: center;
   background-color: black;
-  min-height: 100vh; /* Ensures the height stretches to at least the viewport height */
-  width: 100%; /* Ensures the width stretches to 100% */
+  /* min-height: 100vh; 
+  width: 100%;  */
 }
 
 .main-container {
@@ -133,9 +133,15 @@ ul {
   
   }
 
+  .todoProgress {
+    width: 90%;
+  }
+
   .carousel-image {
     max-height: 300px; /* Adjust the max-height for mobile devices */
   }
+
+
  
   
 }

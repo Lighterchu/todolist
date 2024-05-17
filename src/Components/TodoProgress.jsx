@@ -9,9 +9,9 @@ const TodoProgress = ({progress, settingTaskAmount}) => {
             <h2>Amount Done:</h2>
             {(
                 settingTaskAmount >= 1 ? 
-                <CProgress color="success" variant="striped" value={progress} animated>{progress}%</CProgress>
+                <CProgress className='progress-bar' color="success" variant="striped" value={progress} animated>{progress}%</CProgress>
                 :
-                <CProgress color="danger" variant="striped" value={100} animated>Nothing Tasked Yet</CProgress>
+                <CProgress className='progress-bar' color="danger" variant="striped" value={100} animated>Nothing Tasked Yet</CProgress>
             )}
         </div>
     </div>
