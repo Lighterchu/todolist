@@ -1,0 +1,131 @@
+* {
+  color: white; 
+}
+
+body {
+  background-color: black;
+}
+.App {
+  text-align: center;
+  background-color: black;
+ 
+}
+
+.main-container {
+  padding-bottom: 10px;
+  
+}
+
+.alert-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.alert {
+  width: 50%;
+}
+
+
+.todo-list-container {
+  display: grid;
+  margin-top: 10px;
+  max-height: 350px;
+  place-items: center; /* Centers both horizontally and vertically */
+  overflow: auto;
+  /* background-color: blue; */
+  
+}
+
+input { 
+  color: rgb(225, 221, 221);
+  
+}
+
+.input-container {
+  margin-top:10px;
+  background-color: rgba(45, 37, 37, 0.424);
+}
+
+button {
+  color: rgb(255, 243, 243);
+  width: 230px;
+}
+
+.todo-list {
+  background-color: rgb(249, 142, 233);
+  width: 60%;
+  padding-right: 40px;
+  border-radius: 5%;
+
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  max-height: 500px; /* Adjust the max-height as per your design requirements */
+  object-fit: cover;
+}
+
+
+.todoProgress-container {
+  display: grid;
+  margin-top: 10px;
+  padding-bottom: 20px;
+  max-height: 350px;
+  place-items: center; /* Centers both horizontally and vertically */
+  
+  
+}
+
+.todoProgress {
+  /* background-color:red;  */
+  width: 50%;
+}
+
+
+.todolist-container {
+  display: flex;
+  padding-top: 10px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  /* margin: 0 auto; */
+  justify-content: space-around;
+  background-color: pink;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.buttons {
+ margin-left: 20px;
+
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* media sizing */
+@media (max-width: 600px) {
+  button {
+    color: rgb(255, 243, 243);
+    width: 50%;
+  }
+
+  .todo-list {
+    background-color: rgb(249, 142, 233);
+    width: 70%;
+    padding-right: 40px;
+    border-radius: 5%;
+  
+  }
+
+  .carousel-image {
+    max-height: 300px; /* Adjust the max-height for mobile devices */
+  }
+ 
+  
+}
