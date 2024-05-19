@@ -13,7 +13,7 @@ const TodoItem = ({ todo, onDelete, onComplete}) => {
     <div className="todolist-container">
       <li>
         <h1>{task}</h1>
-        <p>Time: {remainingTime}</p> 
+        <p>{remainingTime}</p> 
         <p>{expired}</p>
         <CButton className="buttons" size="sm" color="success" onClick={onComplete}>
           Done
